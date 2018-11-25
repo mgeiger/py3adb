@@ -1,16 +1,10 @@
-try:
-    import sys
-    import os
-    import re
-    import subprocess
-except ImportError as e:
-    # should never be reached
-    print("[f] Required module missing. %s" % e.args[0])
-    sys.exit(-1)
+import sys
+import os
+import subprocess
 
 
 class ADB:
-    PYADB_VERSION = "0.1.5"
+    PYADB_VERSION = "3.0.0"
 
     __adb_path = None
     __output = None
@@ -72,7 +66,7 @@ class ADB:
             ret = self.__adb_path + " "
             if self.__target is not None:
                 ret += "-s " + self.__target + " "
-            if type(cmd) == type([]):
+            if isinstance(cmd, type([])):
                 ret += " ".join(cmd)
             else:
                 ret += cmd
@@ -81,7 +75,7 @@ class ADB:
             if self.__target is not None:
                 ret += ["-s", self.__target]
 
-            if type(cmd) == type([]):
+            if isinstance(cmd, type([])):
                 for i in cmd:
                     ret.append(i)
             else:
