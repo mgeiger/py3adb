@@ -2,6 +2,7 @@ import pytest
 import os
 from pathlib import Path
 
+import py3adb
 from py3adb import ADB
 
 
@@ -19,7 +20,7 @@ def adb_executable():
 
 
 @pytest.mark.usefixtures('tmpdir')
-@pytest.fixture(scope='module')
+@pytest.fixture(scope='function')
 def fake_adb_executable(tmpdir):
     """
     Generates a fake executable used for mocking
@@ -44,3 +45,13 @@ def test_instantiation(adb_executable):
         pytest.fail("No failure should be raised")
 
 
+@pytest.mark.usefixtures('fake_adb_executable')
+def test_pyadb_version(fake_adb_executable):
+    """
+    Ensures the version in the Class ADB is the same as the package
+
+    :param fake_adb_executable: A fake executable location
+    :return: None
+    """
+    adb = ADB(fake_adb_executable)
+    assert adb.pyadb_version() == py3adb.__version__
