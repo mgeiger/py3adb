@@ -29,7 +29,7 @@ def fake_adb_executable(tmpdir):
     :return: Executable Path
     """
     executable = tmpdir.mkdir("bin").join("adb")
-    Path(executable).touch(mode=0o666, exist_ok=True)
+    Path(str(executable)).touch(mode=0o666, exist_ok=True)
     yield executable
 
 
