@@ -11,7 +11,7 @@ with open("README.md") as readme_file:
 
 setup(
     name="py3adb",
-    version="3.0.2",
+    version="3.0.3",
     author="Matthew Geiger",
     author_email="matthew.j.geiger@gmail.com",
     description=("Simple python module to interact with Android Debug Bridge tool"),
