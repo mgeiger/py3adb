@@ -21,11 +21,10 @@ setup(
     packages=["py3adb"],
     long_description=readme,
     classifiers=[
-        "Development Status :: 2 - Alpha",
-        "Topic :: Utilities",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
-        "Natural Language :: English",
         "License :: OSI Approved :: BSD License",
+        "Natural Language :: English",
         "Programming Language :: Python :: 3",
     ],
 )
