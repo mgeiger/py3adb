@@ -4,7 +4,7 @@ import subprocess
 
 
 class ADB:
-    PYADB_VERSION = "3.0.0"
+    PYADB_VERSION = "3.0.1"
 
     # reboot modes
     REBOOT_RECOVERY = 1
