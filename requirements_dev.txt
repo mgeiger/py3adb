@@ -8,7 +8,7 @@ pip==18.1
 pytest==3.8.2
 pytest-runner==4.2
 tox==3.5.2
-twine==1.12.1
+twine==3.6.0
 watchdog==0.9.0
 wheel==0.32.1
 Sphinx==1.8.1
