@@ -1,5 +1,5 @@
 bumpversion==0.5.3
-coverage==4.5.1
+coverage==5.5
 flake8==3.5.0
 mock==2.0.0
 pathlib==1.0.1
@@ -8,7 +8,7 @@ pip==22.0.3
 pytest==3.8.2
 pytest-runner==4.2
 tox==3.5.2
-twine==1.12.1
+twine==3.8.0
 watchdog==0.9.0
 wheel==0.32.1
-Sphinx==1.8.1
+Sphinx==4.4.0
