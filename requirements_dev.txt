@@ -1,5 +1,5 @@
 bumpversion==0.5.3
-coverage==4.5.1
+coverage==5.5
 flake8==3.5.0
 mock==2.0.0
 pathlib==1.0.1
